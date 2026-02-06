@@ -156,6 +156,44 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Issue: Calendar component not working
 **Solution:** Ensure you're using the updated `react-day-picker` v9 API
 
+### Issue: Images not loading or showing placeholders
+This is a common issue. **Solutions:**
+
+1. **Quick fix - Run the setup script:**
+   ```bash
+   chmod +x setup.sh
+   ./setup.sh
+   ```
+
+2. **Clear Next.js cache:**
+   ```bash
+   rm -rf .next
+   npm run dev
+   ```
+
+3. **Test images directly:**
+   - Visit: `http://localhost:3000/test-images`
+   - Or try: `http://localhost:3000/doctor-sarah.jpg`
+
+4. **Check browser console** (F12) for 404 errors or image loading issues
+
+5. **Clear browser cache:**
+   - Chrome/Edge: Ctrl+Shift+Delete
+   - Firefox: Ctrl+Shift+Delete
+   - Safari: Cmd+Option+E
+
+6. **Hard reload page:**
+   - Windows/Linux: Ctrl+Shift+R
+   - Mac: Cmd+Shift+R
+
+7. **Verify images exist:**
+   ```bash
+   ls -la public/
+   # Should show: hero-dental.jpg, doctor-*.jpg, etc.
+   ```
+
+**For detailed image troubleshooting, see IMAGES_FIX.md**
+
 ## 📄 License
 
 This project is private and proprietary.

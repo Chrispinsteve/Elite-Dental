@@ -5,6 +5,12 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [],
+    formats: ['image/webp'],
+  },
+  // Ensure static files are served correctly
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
   },
 }
 
