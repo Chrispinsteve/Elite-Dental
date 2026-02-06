@@ -127,6 +127,13 @@ All images are now lightweight SVG graphics (~19KB total) instead of large JPG f
 - ✅ Clean, professional appearance
 - ✅ Perfect for development and production
 
+### 📱 Mobile Input Zoom Fix
+No more annoying zoom when tapping input fields! The app now:
+- ✅ Prevents automatic zoom on mobile devices
+- ✅ Uses 16px font size for inputs on mobile (prevents iOS Safari zoom)
+- ✅ Provides smooth, professional mobile experience
+- ✅ See `MOBILE_ZOOM_FIX.md` for technical details
+
 ## 🛠️ Development
 
 ```bash

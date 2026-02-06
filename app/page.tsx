@@ -979,7 +979,7 @@ function ContactPage() {
                     <label className="block text-sm font-medium text-gray-700 mb-1.5">First Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-sm bg-white text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-base md:text-sm bg-white text-gray-900"
                       placeholder="John"
                     />
                   </div>
@@ -987,7 +987,7 @@ function ContactPage() {
                     <label className="block text-sm font-medium text-gray-700 mb-1.5">Last Name</label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-sm bg-white text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-base md:text-sm bg-white text-gray-900"
                       placeholder="Smith"
                     />
                   </div>
@@ -997,7 +997,7 @@ function ContactPage() {
                     <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
                     <input
                       type="email"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-sm bg-white text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-base md:text-sm bg-white text-gray-900"
                       placeholder="your@email.com"
                     />
                   </div>
@@ -1005,7 +1005,7 @@ function ContactPage() {
                     <label className="block text-sm font-medium text-gray-700 mb-1.5">Phone</label>
                     <input
                       type="tel"
-                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-sm bg-white text-gray-900"
+                      className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-base md:text-sm bg-white text-gray-900"
                       placeholder="(561) 000-0000"
                     />
                   </div>
@@ -1014,7 +1014,7 @@ function ContactPage() {
                   <label className="block text-sm font-medium text-gray-700 mb-1.5">Subject</label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-sm bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none text-base md:text-sm bg-white text-gray-900"
                     placeholder="How can we help?"
                   />
                 </div>
@@ -1022,7 +1022,7 @@ function ContactPage() {
                   <label className="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
                   <textarea
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none resize-none text-sm bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none resize-none text-base md:text-sm bg-white text-gray-900"
                     placeholder="Tell us more..."
                   />
                 </div>
@@ -1201,7 +1201,7 @@ function BookingPage({ setCurrentPage }: PageProps) {
                   type="date"
                   value={selectedDate}
                   onChange={(e) => setSelectedDate(e.target.value)}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-sm bg-white text-gray-900"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-base md:text-sm bg-white text-gray-900"
                 />
               </div>
               <div>
@@ -1255,7 +1255,7 @@ function BookingPage({ setCurrentPage }: PageProps) {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-sm bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-base md:text-sm bg-white text-gray-900"
                     placeholder="John Smith"
                   />
                 </div>
@@ -1265,7 +1265,7 @@ function BookingPage({ setCurrentPage }: PageProps) {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-sm bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-base md:text-sm bg-white text-gray-900"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -1275,7 +1275,7 @@ function BookingPage({ setCurrentPage }: PageProps) {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-sm bg-white text-gray-900"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-base md:text-sm bg-white text-gray-900"
                     placeholder="(561) 000-0000"
                   />
                 </div>
@@ -1416,7 +1416,7 @@ function LoginPage({ setCurrentPage, setIsLoggedIn, setUserRole }: LoginPageProp
               <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
               <input
                 type="email"
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-sm bg-white text-gray-900"
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-base md:text-sm bg-white text-gray-900"
                 placeholder="your@email.com"
               />
             </div>
@@ -1424,7 +1424,7 @@ function LoginPage({ setCurrentPage, setIsLoggedIn, setUserRole }: LoginPageProp
               <label className="block text-sm font-medium text-gray-700 mb-1.5">Password</label>
               <input
                 type="password"
-                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-sm bg-white text-gray-900"
+                className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-teal-500 outline-none text-base md:text-sm bg-white text-gray-900"
                 placeholder="Enter password"
               />
             </div>

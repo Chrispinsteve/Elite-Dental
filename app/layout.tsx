@@ -10,6 +10,12 @@ const _geistMono = Geist_Mono({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Elite Dental - Premium Dental Care',
   description: 'Experience world-class dental care with cutting-edge technology and a gentle touch at Elite Dental.',
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 }
 
 export default function RootLayout({
