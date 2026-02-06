@@ -1,0 +1,39 @@
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern gradient background -->
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="overlayGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="url(#heroGrad)"/>
+  
+  <!-- Overlay pattern -->
+  <rect width="1920" height="1080" fill="url(#overlayGrad)"/>
+  
+  <!-- Geometric shapes for modern look -->
+  <circle cx="1600" cy="200" r="150" fill="#ffffff" opacity="0.1"/>
+  <circle cx="300" cy="900" r="120" fill="#ffffff" opacity="0.08"/>
+  <rect x="1200" y="700" width="400" height="400" rx="50" fill="#ffffff" opacity="0.05" transform="rotate(15 1400 900)"/>
+  
+  <!-- Tooth icon -->
+  <g transform="translate(860, 400)">
+    <path d="M100 20C70 20 50 35 45 55C40 75 25 85 15 100C5 115 5 135 15 150C25 165 35 190 45 210C55 230 65 220 67.5 200C70 180 80 170 100 170C120 170 130 180 132.5 200C135 220 145 230 155 210C165 190 175 165 185 150C195 135 195 115 185 100C175 85 160 75 155 55C150 35 130 20 100 20Z" 
+          fill="#ffffff" opacity="0.9" stroke="#ffffff" stroke-width="3"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="960" y="620" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff" text-anchor="middle">
+    Elite Dental Care
+  </text>
+  <text x="960" y="680" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" opacity="0.9" text-anchor="middle">
+    Modern Dental Clinic
+  </text>
+</svg>

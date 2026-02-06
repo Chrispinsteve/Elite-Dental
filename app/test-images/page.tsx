@@ -2,13 +2,13 @@ import Image from 'next/image'
 
 export default function TestImages() {
   const images = [
-    { path: '/hero-dental.jpg', name: 'Hero Image' },
-    { path: '/doctor-sarah.jpg', name: 'Dr. Sarah Mitchell' },
-    { path: '/doctor-james.jpg', name: 'Dr. James Wilson' },
-    { path: '/doctor-emily.jpg', name: 'Dr. Emily Chen' },
-    { path: '/doctor-michael.jpg', name: 'Dr. Michael Brown' },
-    { path: '/about-clinic.jpg', name: 'Clinic Image' },
-    { path: '/happy-patient.jpg', name: 'Happy Patient' },
+    { path: '/hero-dental.svg', name: 'Hero Image' },
+    { path: '/doctor-sarah.svg', name: 'Dr. Sarah Mitchell' },
+    { path: '/doctor-james.svg', name: 'Dr. James Wilson' },
+    { path: '/doctor-emily.svg', name: 'Dr. Emily Chen' },
+    { path: '/doctor-michael.svg', name: 'Dr. Michael Brown' },
+    { path: '/about-clinic.svg', name: 'Clinic Image' },
+    { path: '/happy-patient.svg', name: 'Happy Patient' },
     { path: '/placeholder.svg', name: 'Placeholder SVG' },
   ]
 

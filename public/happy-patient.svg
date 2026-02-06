@@ -1,0 +1,60 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="patientBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef9c3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fde047;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#patientBg)"/>
+  
+  <!-- Happy face -->
+  <circle cx="300" cy="280" r="120" fill="#ffffff" stroke="#eab308" stroke-width="6"/>
+  
+  <!-- Eyes -->
+  <circle cx="260" cy="260" r="12" fill="#eab308"/>
+  <circle cx="340" cy="260" r="12" fill="#eab308"/>
+  
+  <!-- Big smile showing teeth -->
+  <path d="M240 300 Q300 350 360 300" stroke="#eab308" stroke-width="6" fill="none"/>
+  
+  <!-- Teeth -->
+  <rect x="270" y="305" width="15" height="20" fill="#ffffff"/>
+  <rect x="290" y="305" width="15" height="20" fill="#ffffff"/>
+  <rect x="310" y="305" width="15" height="20" fill="#ffffff"/>
+  
+  <!-- Sparkles around smile -->
+  <circle cx="380" cy="290" r="4" fill="#eab308" opacity="0.6"/>
+  <circle cx="400" cy="310" r="3" fill="#eab308" opacity="0.6"/>
+  <circle cx="220" cy="290" r="4" fill="#eab308" opacity="0.6"/>
+  <circle cx="200" cy="310" r="3" fill="#eab308" opacity="0.6"/>
+  
+  <!-- Star sparkles -->
+  <path d="M390 280 L392 286 L398 286 L393 290 L395 296 L390 292 L385 296 L387 290 L382 286 L388 286 Z" fill="#eab308"/>
+  <path d="M210 280 L212 286 L218 286 L213 290 L215 296 L210 292 L205 296 L207 290 L202 286 L208 286 Z" fill="#eab308"/>
+  
+  <!-- Thumbs up -->
+  <g transform="translate(380, 400)">
+    <rect x="-20" y="0" width="40" height="60" rx="8" fill="#eab308"/>
+    <rect x="-15" y="-30" width="30" height="35" rx="8" fill="#eab308"/>
+    <circle cx="0" cy="-32" r="18" fill="#eab308"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="300" y="500" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#eab308" text-anchor="middle">
+    Happy Patient
+  </text>
+  <text x="300" y="530" font-family="Arial, sans-serif" font-size="20" fill="#eab308" opacity="0.8" text-anchor="middle">
+    5-Star Experience
+  </text>
+  
+  <!-- Stars -->
+  <g transform="translate(200, 545)">
+    <path d="M10 0 L12 6 L18 6 L13 10 L15 16 L10 12 L5 16 L7 10 L2 6 L8 6 Z" fill="#eab308"/>
+    <path d="M30 0 L32 6 L38 6 L33 10 L35 16 L30 12 L25 16 L27 10 L22 6 L28 6 Z" fill="#eab308"/>
+    <path d="M50 0 L52 6 L58 6 L53 10 L55 16 L50 12 L45 16 L47 10 L42 6 L48 6 Z" fill="#eab308"/>
+    <path d="M70 0 L72 6 L78 6 L73 10 L75 16 L70 12 L65 16 L67 10 L62 6 L68 6 Z" fill="#eab308"/>
+    <path d="M90 0 L92 6 L98 6 L93 10 L95 16 L90 12 L85 16 L87 10 L82 6 L88 6 Z" fill="#eab308"/>
+  </g>
+</svg>

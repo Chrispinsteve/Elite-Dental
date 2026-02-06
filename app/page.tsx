@@ -347,10 +347,10 @@ function HomePage({ setCurrentPage }: PageProps) {
   ];
 
   const doctors = [
-    { name: "Dr. Sarah Mitchell", role: "Lead Dentist", specialty: "Cosmetic Dentistry", experience: "15 years", photo: "/doctor-sarah.jpg" },
-    { name: "Dr. James Wilson", role: "Orthodontist", specialty: "Orthodontics", experience: "12 years", photo: "/doctor-james.jpg" },
-    { name: "Dr. Emily Chen", role: "Pediatric Dentist", specialty: "Children's Dentistry", experience: "10 years", photo: "/doctor-emily.jpg" },
-    { name: "Dr. Michael Brown", role: "Oral Surgeon", specialty: "Oral Surgery", experience: "18 years", photo: "/doctor-michael.jpg" },
+    { name: "Dr. Sarah Mitchell", role: "Lead Dentist", specialty: "Cosmetic Dentistry", experience: "15 years", photo: "/doctor-sarah.svg" },
+    { name: "Dr. James Wilson", role: "Orthodontist", specialty: "Orthodontics", experience: "12 years", photo: "/doctor-james.svg" },
+    { name: "Dr. Emily Chen", role: "Pediatric Dentist", specialty: "Children's Dentistry", experience: "10 years", photo: "/doctor-emily.svg" },
+    { name: "Dr. Michael Brown", role: "Oral Surgeon", specialty: "Oral Surgery", experience: "18 years", photo: "/doctor-michael.svg" },
   ];
 
   const testimonials = [
@@ -364,7 +364,7 @@ function HomePage({ setCurrentPage }: PageProps) {
       {/* Hero Section */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex items-end lg:items-center overflow-hidden">
         <Image
-          src="/hero-dental.jpg"
+          src="/hero-dental.svg"
           alt="Modern dental clinic interior"
           fill
           className="object-cover"
@@ -617,7 +617,7 @@ function AboutPage({ setCurrentPage }: PageProps) {
       {/* Hero */}
       <section className="relative py-20 lg:py-28 overflow-hidden">
         <Image
-          src="/about-clinic.jpg"
+          src="/about-clinic.svg"
           alt="Elite Dental clinic interior"
           fill
           className="object-cover"
@@ -653,7 +653,7 @@ function AboutPage({ setCurrentPage }: PageProps) {
               </div>
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              <Image src="/happy-patient.jpg" alt="Happy patient at Elite Dental" fill className="object-cover" />
+              <Image src="/happy-patient.svg" alt="Happy patient at Elite Dental" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -845,10 +845,10 @@ function ServicesPage({ setCurrentPage }: PageProps) {
 /* ─── DOCTORS PAGE ─── */
 function DoctorsPage({ setCurrentPage }: PageProps) {
   const doctors = [
-    { name: "Dr. Sarah Mitchell", role: "Lead Dentist", specialty: "Cosmetic Dentistry", experience: "15 years", photo: "/doctor-sarah.jpg", bio: "Dr. Mitchell is passionate about creating beautiful, natural-looking smiles using the latest cosmetic techniques." },
-    { name: "Dr. James Wilson", role: "Orthodontist", specialty: "Orthodontics", experience: "12 years", photo: "/doctor-james.jpg", bio: "Dr. Wilson specializes in clear aligners and braces, helping patients of all ages achieve perfectly aligned teeth." },
-    { name: "Dr. Emily Chen", role: "Pediatric Dentist", specialty: "Children's Dentistry", experience: "10 years", photo: "/doctor-emily.jpg", bio: "Dr. Chen creates a fun, gentle environment that helps children develop positive associations with dental care." },
-    { name: "Dr. Michael Brown", role: "Oral Surgeon", specialty: "Oral Surgery", experience: "18 years", photo: "/doctor-michael.jpg", bio: "Dr. Brown is an experienced surgeon specializing in implants, extractions, and complex oral procedures." },
+    { name: "Dr. Sarah Mitchell", role: "Lead Dentist", specialty: "Cosmetic Dentistry", experience: "15 years", photo: "/doctor-sarah.svg", bio: "Dr. Mitchell is passionate about creating beautiful, natural-looking smiles using the latest cosmetic techniques." },
+    { name: "Dr. James Wilson", role: "Orthodontist", specialty: "Orthodontics", experience: "12 years", photo: "/doctor-james.svg", bio: "Dr. Wilson specializes in clear aligners and braces, helping patients of all ages achieve perfectly aligned teeth." },
+    { name: "Dr. Emily Chen", role: "Pediatric Dentist", specialty: "Children's Dentistry", experience: "10 years", photo: "/doctor-emily.svg", bio: "Dr. Chen creates a fun, gentle environment that helps children develop positive associations with dental care." },
+    { name: "Dr. Michael Brown", role: "Oral Surgeon", specialty: "Oral Surgery", experience: "18 years", photo: "/doctor-michael.svg", bio: "Dr. Brown is an experienced surgeon specializing in implants, extractions, and complex oral procedures." },
   ];
 
   return (
@@ -1061,10 +1061,10 @@ function BookingPage({ setCurrentPage }: PageProps) {
   ];
 
   const doctors = [
-    { name: "Dr. Sarah Mitchell", specialty: "Cosmetic Dentistry", photo: "/doctor-sarah.jpg" },
-    { name: "Dr. James Wilson", specialty: "Orthodontics", photo: "/doctor-james.jpg" },
-    { name: "Dr. Emily Chen", specialty: "Pediatric Dentistry", photo: "/doctor-emily.jpg" },
-    { name: "Dr. Michael Brown", specialty: "Oral Surgery", photo: "/doctor-michael.jpg" },
+    { name: "Dr. Sarah Mitchell", specialty: "Cosmetic Dentistry", photo: "/doctor-sarah.svg" },
+    { name: "Dr. James Wilson", specialty: "Orthodontics", photo: "/doctor-james.svg" },
+    { name: "Dr. Emily Chen", specialty: "Pediatric Dentistry", photo: "/doctor-emily.svg" },
+    { name: "Dr. Michael Brown", specialty: "Oral Surgery", photo: "/doctor-michael.svg" },
   ];
 
   const times = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
