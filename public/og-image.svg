@@ -1,0 +1,64 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ogOverlay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.1" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <rect width="1200" height="630" fill="url(#ogOverlay)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="1050" cy="100" r="120" fill="#ffffff" opacity="0.08"/>
+  <circle cx="150" cy="550" r="100" fill="#ffffff" opacity="0.08"/>
+  <rect x="800" y="400" width="300" height="300" rx="40" fill="#ffffff" opacity="0.05" transform="rotate(15 950 550)"/>
+  
+  <!-- Main tooth icon -->
+  <g transform="translate(100, 200)">
+    <path d="M80 20C60 20 45 30 42 45C39 60 28 68 20 80C12 92 12 108 20 120C28 132 34 152 42 168C50 184 58 176 60 160C62 144 70 136 80 136C90 136 98 144 100 160C102 176 110 184 118 168C126 152 132 132 140 120C148 108 148 92 140 80C132 68 121 60 118 45C115 30 100 20 80 20Z" 
+          fill="#ffffff" stroke="#ffffff" stroke-width="4" opacity="0.95"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="300" y="270" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#ffffff">
+    Elite Dental
+  </text>
+  
+  <!-- Tagline -->
+  <text x="300" y="340" font-family="Arial, sans-serif" font-size="36" fill="#ffffff" opacity="0.95">
+    Premium Dental Care
+  </text>
+  
+  <!-- Features -->
+  <g transform="translate(300, 400)">
+    <!-- Feature 1 -->
+    <circle cx="15" cy="15" r="8" fill="#ffffff" opacity="0.9"/>
+    <text x="40" y="22" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" opacity="0.9">
+      Advanced Technology
+    </text>
+    
+    <!-- Feature 2 -->
+    <circle cx="15" cy="60" r="8" fill="#ffffff" opacity="0.9"/>
+    <text x="40" y="67" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" opacity="0.9">
+      Expert Dentists
+    </text>
+    
+    <!-- Feature 3 -->
+    <circle cx="15" cy="105" r="8" fill="#ffffff" opacity="0.9"/>
+    <text x="40" y="112" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" opacity="0.9">
+      Gentle Care
+    </text>
+  </g>
+  
+  <!-- Website -->
+  <text x="300" y="580" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" opacity="0.8">
+    Book Your Appointment Today
+  </text>
+</svg>
