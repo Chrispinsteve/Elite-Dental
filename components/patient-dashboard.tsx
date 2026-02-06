@@ -24,6 +24,7 @@ import {
 
 interface PatientDashboardProps {
   setCurrentPage: (page: string) => void
+  setIsLoggedIn?: (value: boolean) => void
 }
 
 type Tab = "overview" | "appointments" | "records" | "profile"
@@ -178,7 +179,7 @@ function PatientSidebar({
           </button>
         ))}
       </nav>
-      <div className="p-4 border-t border-gray-100">
+      <div className="p-4 border-t border-gray-100 space-y-2">
         <button
           type="button"
           onClick={() => setCurrentPage("booking")}
@@ -186,6 +187,14 @@ function PatientSidebar({
         >
           <Calendar size={18} />
           Book Appointment
+        </button>
+        <button
+          type="button"
+          onClick={() => setCurrentPage("home")}
+          className="w-full py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
+        >
+          <ArrowRight size={18} className="rotate-180" />
+          Back to Home
         </button>
       </div>
     </aside>
@@ -738,11 +747,112 @@ function ProfileTab() {
 }
 
 /* ── Main Dashboard ── */
-export default function PatientDashboard({ setCurrentPage }: PatientDashboardProps) {
+export default function PatientDashboard({ setCurrentPage, setIsLoggedIn }: PatientDashboardProps) {
   const [activeTab, setActiveTab] = useState<Tab>("overview")
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const handleLogout = () => {
+    if (setIsLoggedIn) setIsLoggedIn(false)
+    setCurrentPage("home")
+  }
 
   return (
-    <div className="pt-20 min-h-screen bg-gray-50 flex">
+    <>
+      {/* Mobile Header */}
+      <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+        <div className="flex items-center justify-between px-4 h-16">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-teal-500 to-cyan-400 flex items-center justify-center text-white font-bold text-sm">
+              {mockPatient.firstName[0]}
+              {mockPatient.lastName[0]}
+            </div>
+            <div>
+              <p className="font-semibold text-gray-900 text-sm">
+                {mockPatient.firstName} {mockPatient.lastName}
+              </p>
+              <p className="text-xs text-gray-500">Patient Portal</p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+          >
+            <Menu size={24} />
+          </button>
+        </div>
+        
+        {/* Mobile Menu Dropdown */}
+        {mobileMenuOpen && (
+          <div className="absolute top-16 left-0 right-0 bg-white border-b border-gray-200 shadow-lg">
+            <div className="p-4 space-y-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setCurrentPage("booking")
+                  setMobileMenuOpen(false)
+                }}
+                className="w-full py-3 bg-teal-600 text-white rounded-xl font-semibold hover:bg-teal-700 transition-colors flex items-center justify-center gap-2"
+              >
+                <Calendar size={18} />
+                Book Appointment
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setCurrentPage("home")
+                  setMobileMenuOpen(false)
+                }}
+                className="w-full py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
+              >
+                <ArrowRight size={18} className="rotate-180" />
+                Back to Home
+              </button>
+              <button
+                type="button"
+                onClick={handleLogout}
+                className="w-full py-3 border border-red-200 text-red-600 rounded-xl font-semibold hover:bg-red-50 transition-colors flex items-center justify-center gap-2"
+              >
+                <LogOut size={18} />
+                Logout
+              </button>
+            </div>
+          </div>
+        )}
+      </header>
+
+      {/* Desktop Header */}
+      <header className="hidden lg:block fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={() => setCurrentPage("home")}
+            className="flex items-center gap-2"
+          >
+            <div className="w-11 h-11 bg-teal-600 rounded-xl flex items-center justify-center">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white">
+                <path d="M12 2C9.5 2 7.5 3.5 7 5.5C6.5 7.5 5 8.5 4 10C3 11.5 3 13.5 4 15C5 16.5 6 19 7 21C8 23 9 22 9.5 20C10 18 11 17 12 17C13 17 14 18 14.5 20C15 22 16 23 17 21C18 19 19 16.5 20 15C21 13.5 21 11.5 20 10C19 8.5 17.5 7.5 17 5.5C16.5 3.5 14.5 2 12 2Z" />
+              </svg>
+            </div>
+            <span className="text-lg font-bold text-gray-900">Elite Dental</span>
+          </button>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-gray-600">
+              {mockPatient.firstName} {mockPatient.lastName}
+            </span>
+            <button
+              type="button"
+              onClick={handleLogout}
+              className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-lg transition-colors flex items-center gap-2"
+            >
+              <LogOut size={16} />
+              Logout
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <div className="pt-20 min-h-screen bg-gray-50 flex">
       <PatientSidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -759,5 +869,6 @@ export default function PatientDashboard({ setCurrentPage }: PatientDashboardPro
       </main>
       <MobileBottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
+    </>
   )
 }

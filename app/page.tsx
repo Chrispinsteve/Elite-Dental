@@ -1442,12 +1442,16 @@ function LoginPage({ setCurrentPage, setIsLoggedIn, setUserRole }: LoginPageProp
 }
 
 /* ─── Patient/Admin Wrappers ─── */
-function PatientPortal({ setCurrentPage }: PageProps) {
-  return <PatientDashboard setCurrentPage={setCurrentPage} />;
+interface DashboardProps extends PageProps {
+  setIsLoggedIn: (value: boolean) => void
 }
 
-function AdminDashboard({ setCurrentPage }: PageProps) {
-  return <StaffDashboard setCurrentPage={setCurrentPage} />;
+function PatientPortal({ setCurrentPage, setIsLoggedIn }: DashboardProps) {
+  return <PatientDashboard setCurrentPage={setCurrentPage} setIsLoggedIn={setIsLoggedIn} />;
+}
+
+function AdminDashboard({ setCurrentPage, setIsLoggedIn }: DashboardProps) {
+  return <StaffDashboard setCurrentPage={setCurrentPage} setIsLoggedIn={setIsLoggedIn} />;
 }
 
 /* ─── FOOTER ─── */
@@ -1544,9 +1548,9 @@ export default function Page() {
           />
         );
       case "portal":
-        return <PatientPortal setCurrentPage={setCurrentPage} />;
+        return <PatientPortal setCurrentPage={setCurrentPage} setIsLoggedIn={setIsLoggedIn} />;
       case "admin":
-        return <AdminDashboard setCurrentPage={setCurrentPage} />;
+        return <AdminDashboard setCurrentPage={setCurrentPage} setIsLoggedIn={setIsLoggedIn} />;
       default:
         return <HomePage setCurrentPage={setCurrentPage} />;
     }
