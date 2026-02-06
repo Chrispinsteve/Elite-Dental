@@ -749,7 +749,6 @@ function ProfileTab() {
 /* ── Main Dashboard ── */
 export default function PatientDashboard({ setCurrentPage, setIsLoggedIn }: PatientDashboardProps) {
   const [activeTab, setActiveTab] = useState<Tab>("overview")
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const handleLogout = () => {
     if (setIsLoggedIn) setIsLoggedIn(false)
@@ -761,64 +760,32 @@ export default function PatientDashboard({ setCurrentPage, setIsLoggedIn }: Pati
       {/* Mobile Header */}
       <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="flex items-center justify-between px-4 h-16">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-gradient-to-br from-teal-500 to-cyan-400 flex items-center justify-center text-white font-bold text-sm">
+          <button
+            type="button"
+            onClick={() => setCurrentPage("home")}
+            className="flex items-center gap-2 text-gray-700 hover:text-gray-900 font-medium"
+          >
+            <ArrowRight size={20} className="rotate-180" />
+            <span>Back</span>
+          </button>
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-teal-500 to-cyan-400 flex items-center justify-center text-white font-bold text-xs">
               {mockPatient.firstName[0]}
               {mockPatient.lastName[0]}
             </div>
-            <div>
-              <p className="font-semibold text-gray-900 text-sm">
-                {mockPatient.firstName} {mockPatient.lastName}
-              </p>
-              <p className="text-xs text-gray-500">Patient Portal</p>
-            </div>
+            <span className="font-semibold text-gray-900 text-sm">
+              {mockPatient.firstName}
+            </span>
           </div>
           <button
             type="button"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg"
+            onClick={handleLogout}
+            className="p-2 text-gray-600 hover:text-red-600 transition-colors"
+            title="Logout"
           >
-            <Menu size={24} />
+            <LogOut size={20} />
           </button>
         </div>
-        
-        {/* Mobile Menu Dropdown */}
-        {mobileMenuOpen && (
-          <div className="absolute top-16 left-0 right-0 bg-white border-b border-gray-200 shadow-lg">
-            <div className="p-4 space-y-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setCurrentPage("booking")
-                  setMobileMenuOpen(false)
-                }}
-                className="w-full py-3 bg-teal-600 text-white rounded-xl font-semibold hover:bg-teal-700 transition-colors flex items-center justify-center gap-2"
-              >
-                <Calendar size={18} />
-                Book Appointment
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setCurrentPage("home")
-                  setMobileMenuOpen(false)
-                }}
-                className="w-full py-3 bg-gray-100 text-gray-700 rounded-xl font-semibold hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
-              >
-                <ArrowRight size={18} className="rotate-180" />
-                Back to Home
-              </button>
-              <button
-                type="button"
-                onClick={handleLogout}
-                className="w-full py-3 border border-red-200 text-red-600 rounded-xl font-semibold hover:bg-red-50 transition-colors flex items-center justify-center gap-2"
-              >
-                <LogOut size={18} />
-                Logout
-              </button>
-            </div>
-          </div>
-        )}
       </header>
 
       {/* Desktop Header */}

@@ -1074,8 +1074,20 @@ function BookingPage({ setCurrentPage }: PageProps) {
   return (
     <div className="pt-16 lg:pt-20 min-h-screen bg-gray-50">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-8 lg:py-16">
-        <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">Book Appointment</h1>
-        <p className="text-gray-500 text-sm mb-8">No account required. Complete the steps below.</p>
+        <div className="flex items-center gap-3 mb-6">
+          <button
+            type="button"
+            onClick={() => setCurrentPage("home")}
+            className="p-2 -ml-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+          >
+            <ArrowLeft size={24} />
+          </button>
+          <div>
+            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">Book Appointment</h1>
+            <p className="text-gray-500 text-sm">No account required. Complete the steps below.</p>
+          </div>
+        </div>
+        </div>
 
         {/* Stepper */}
         <div className="flex items-center gap-1 mb-10 overflow-x-auto pb-2">
@@ -1375,6 +1387,14 @@ function LoginPage({ setCurrentPage, setIsLoggedIn, setUserRole }: LoginPageProp
   return (
     <div className="pt-16 lg:pt-20 min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="max-w-md w-full mx-4">
+        <button
+          type="button"
+          onClick={() => setCurrentPage("home")}
+          className="flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-6 font-medium"
+        >
+          <ArrowLeft size={20} />
+          <span>Back to Home</span>
+        </button>
         <div className="text-center mb-8">
           <div className="w-14 h-14 bg-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
             <ToothIcon className="text-white" size={28} />
