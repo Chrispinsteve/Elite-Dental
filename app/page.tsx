@@ -1087,7 +1087,6 @@ function BookingPage({ setCurrentPage }: PageProps) {
             <p className="text-gray-500 text-sm">No account required. Complete the steps below.</p>
           </div>
         </div>
-        </div>
 
         {/* Stepper */}
         <div className="flex items-center gap-1 mb-10 overflow-x-auto pb-2">
